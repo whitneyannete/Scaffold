@@ -1,0 +1,26 @@
+{
+  "name": "scaffold",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "serve": "cross-env NODE_ENV=development concurrently \"postcss src/input.css -o src/build/output.css --watch\"  \"live-server ./src\"",
+    "development": "cross-env NODE_ENV=development postcss src/input.css -o src/build/output.css",
+    "production": "cross-env NODE_ENV=production postcss src/input.css -o src/build/output.css",
+    "start": "npm run serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7",
+    "@tailwindcss/forms": "^0.5.2",
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12"
+  },
+  "dependencies": {
+    "concurrently": "^7.1.0",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.7",
+    "live-server": "^1.2.1",
+    "postcss-cli": "^9.1.0"
+  }
+}
