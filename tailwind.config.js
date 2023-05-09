@@ -2,6 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    container:{
+      center:true,
+      padding:"1rem",
+      
+    },
     screens: {
       xs: "320px",
       // => @media (min-width: 320px) { ... }
@@ -22,16 +27,61 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
-      colors: {
-        "changa-green": {
-          50: "#F4FFDB",
-          300: "#9FE870",
-          400: "#9BE06E",
-          500: "#84BD00",
-          600: "#84C041",
-        },
+      fontFamily: {
+        sans: [
+          '"DM Sans"',
+          'Inter',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          '"Noto Sans"',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
       },
+      colors: {
+        'sk-purple': {
+          'darkest': '#10132D',
+          'dark': '#3E3894',
+          'DEFAULT': '#0D015A',
+          'light': '#716BC7',
+          'lighter': '#0F122C',
+          'lightest': '#9490D5',
+        },
+        'sk-orange': '#F89521',
+        'sk-blue': '#5498FF',
+        'sk-cta': '#122344',
+        'sk-dialog': '#253554',
+        'sk-sectionbg': '#FEFDFA',
+      },
+      backgroundImage: {
+        'pattern-dark': "url('/src/assets/section-pattern-dark.png')",
+        'pattern-light': "url('/src/assets/section-pattern-light.png')",
+      },
+      screens: {
+        xxl: '1410px',
+      },
+      
+    },
+    zIndex: {
+      '-1': '-1',
+     '100': 100,
+    }
+  },
+  variants: {
+    extend: {
+      opacity: ['disabled'],
     },
   },
-  plugins: [require("@tailwindcss/forms")],
-};
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
+}
+ 
